@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <title>TodoList JS</title>
+   <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+   <div class="loading">
+      <h1>Loading...</h1>
+   </div>
+
+   <main class="page hidden">
+
+      <!-- Task Input -->
+      <section class="task-input">
+         <input type="text" name="task" class="input-task" placeholder="Todo...">
+         <button class="btn">Add</button>
+
+         <!-- Counters -->
+         <p class="info">
+            <span class="total_tasks">0</span> atividades, <span class="pendente_tasks">0</span> pendentes, <span class="completo_tasks">0</span> completas
+         </p>
+
+      </section>
+
+      <!-- Tasks -->
+      <ul class="tasks">
+      </ul>
+      <ul class="tasks complete">
+      </ul>
+   </main>
+   <script src="js/libs/jquery-1.11.1.min.js"></script>
+   <script src="js/libs/handlebars-v1.3.0.js"></script>
+   <script src="js/todo.js"></script>
+   <script src="js/todo.loader.js"></script>
+   <script src="js/todo.task_input.js"></script>
+   <script src="js/todo.task_manager.js"></script>
+   <script src="js/todo.task.js"></script>
+   <script src="js/todo.boot.js"></script>
+</body>
+</html>

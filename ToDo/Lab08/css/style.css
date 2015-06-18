@@ -1,0 +1,134 @@
+/**
+* title: TodoList with HTML5 and JS
+* author: Rafaell Lycan
+* file: Style.js
+*/
+/* basic reset */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  font-size: 100%;
+}
+/* app */
+body {
+  background: url('../img/bg_wood.png');
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.hidden {
+  display: none;
+}
+/* loading */
+.loading {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.loading h1 {
+  display: inline-block;
+  color: #ffffff;
+  background-color: #000000;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px 50px;
+  margin-top: 15%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+/* container */
+.page {
+  margin: 50px auto;
+  width: 500px;
+  padding: 20px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+}
+/* task-input */
+.task-input {
+  width: 100%;
+  padding-bottom: 10px;
+  /* info about tasks */
+}
+.task-input input,
+.task-input button {
+  padding: 10px;
+  font-size: 1.4em;
+  border: 1px solid #eee;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.task-input input {
+  width: 75%;
+  width: 100%;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.task-input button {
+  width: 20%;
+  float: right;
+  color: #ffffff;
+  background-color: #0BF;
+  border-color: #0BF;
+  display: none;
+}
+.task-input .info {
+  font-size: .75em;
+  color: #999;
+  text-align: right;
+}
+/* tasks */
+.tasks {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.tasks li {
+  padding: 10px 0;
+  position: relative;
+  border-bottom: 1px solid #f5f5f5;
+}
+.tasks li:last-child {
+  border-color: #ccc;
+}
+.tasks li p {
+  vertical-align: center;
+  margin: 0;
+  font-size: 1em;
+  font-weight: bold;
+}
+.tasks li a {
+  display: block;
+  padding: 0 5px 2px;
+  color: transparent;
+  text-decoration: none;
+  font-weight: normal;
+  font-size: .8rem;
+  float: right;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+}
+.tasks li:hover a {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+}
+/* tasks-complete */
+.tasks.complete span {
+  color: #999;
+  font-size: .8em;
+  text-decoration: line-through;
+}
+.tasks.complete li:last-child {
+  border: none;
+}

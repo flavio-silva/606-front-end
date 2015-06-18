@@ -1,0 +1,163 @@
+/**
+* title: TodoList with HTML5 and JS
+* author: Rafaell Lycan
+* file: Style.js
+*/
+
+@largura_100: 100%;
+@cor_branco: #FFFFFF;
+@cor_preto: #000000;
+
+.border_box(){
+   -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+           box-sizing: border-box;
+}
+
+.border_radius(@tamanho){
+   -webkit-border-radius: @tamanho;
+      -moz-border-radius: @tamanho;
+           border-radius: @tamanho;
+}
+
+/* basic reset */
+*, *:before, *:after {
+   .border_box;
+}
+html{
+   font-size: @largura_100;
+}
+
+/* app */
+body{
+   background:url('../img/bg_wood.png');
+   margin: 0;
+   padding: 0;
+   font-family: sans-serif;
+}
+
+.hidden{
+   display: none;
+}
+
+/* loading */
+.loading{
+   position: absolute;
+   width: @largura_100;
+   height: @largura_100;
+   text-align: center;
+
+   h1{
+      display: inline-block;
+      color: @cor_branco;
+      background-color: @cor_preto;
+      background-color: rgba(0,0,0,.5);
+      padding: 20px 50px;
+      margin-top: 15%;
+      .border_radius(5px);
+   }
+}
+
+/* container */
+.page{
+   margin: 50px auto;
+   width: 500px;
+   padding: 20px;
+   background-color: @cor_branco;
+   -webkit-box-shadow: 0 0 2px rgba(0,0,0,0.2);
+           box-shadow: 0 0 2px rgba(0,0,0,0.2);
+}
+
+/* task-input */
+.task-input{
+   width: @largura_100;
+   padding-bottom: 10px;
+
+   input, button{
+      padding: 10px;
+      font-size: 1.4em;
+      border: 1px solid #eee;
+      .border_radius(3px);
+   }
+
+   input{
+      width: 75%;
+      width: @largura_100;
+      float: left;
+      .border_box;
+   }
+
+   button{
+      width: 20%;
+      float: right;
+      color: @cor_branco;
+      background-color: #0BF;
+      border-color: #0BF;
+      display: none;
+   }
+
+   /* info about tasks */
+   .info{
+      font-size: .75em;
+      color: #999;
+      text-align: right;
+   }
+}
+
+/* tasks */
+.tasks{
+   padding: 0;
+   margin: 0;
+   list-style: none;
+
+   li{
+      padding: 10px 0;
+      position: relative;
+      border-bottom: 1px solid #f5f5f5;
+
+      &:last-child{
+         border-color: #ccc;
+      }
+
+      p{
+         vertical-align: center;
+         margin: 0;
+         font-size: 1em;
+         font-weight: bold;
+      }
+
+      a{
+         display: block;
+         padding: 0 5px 2px;
+         color: transparent;
+         text-decoration: none;
+         font-weight: normal;
+         font-size: .8rem;
+         float: right;
+         .border_radius(50px);
+      }
+
+      &:hover a{
+         background-color: rgba(0,0,0,.5);
+         color: @cor_branco;
+      }
+
+      .data_task{
+         float: right;
+         font-size: 12px;
+         line-height: 21px;
+         margin-right: 10px;
+      }
+   }
+}
+
+
+/* tasks-complete */
+.tasks.complete span{
+   color: #999;
+   font-size: .8em;
+   text-decoration: line-through;
+}
+.tasks.complete li:last-child{
+   border: none;
+}
