@@ -1,0 +1,18 @@
+<html>
+<head>
+	<script type="text/javascript">
+
+		function geraSomador(numero) {
+			return function (x) {
+				return x + numero;
+			}
+		}
+
+		var soma5 = geraSomador(5);
+		console.log(soma5(4));
+
+	</script>
+</head>
+<body>	
+</body>
+</html>

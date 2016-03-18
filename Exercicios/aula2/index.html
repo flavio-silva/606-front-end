@@ -1,0 +1,25 @@
+<html>
+<head>
+	<script type="text/javascript">
+		onload = function () {
+			function sendMessage(id) {
+				return function (resposta) {
+					document.getElementById(id).innerHTML = resposta;
+
+				}
+			}
+
+			function validar(msg, fn) {
+				fn(msg);
+			}			
+
+			var id = document.getElementsByTagName('div')[0].attributes[0].value;
+			validar('validar dados com currying', sendMessage(id));
+		}
+	</script>
+</head>
+
+<body>
+	<div id="teste"></div>
+</body>
+</html>

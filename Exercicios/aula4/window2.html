@@ -1,0 +1,32 @@
+<html>
+<head>
+	<script>
+		var myObj = {
+			nome: 'Flavio',
+			init: function (callback) {
+				// callback(this);
+				callback.call(this);
+			}
+		}
+
+		myObj.init(function () {
+			console.log(this.nome);
+			// console.log(this);
+		});
+
+
+		var obj2 = {
+			test: function () {
+				console.log(this);
+			}
+		}
+
+		obj2.test();
+
+	</script>
+</head>
+
+<body>
+	
+</body>
+</html>

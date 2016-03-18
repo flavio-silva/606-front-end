@@ -1,0 +1,24 @@
+<html>
+<head>
+	<script>
+		var funcao = function AppJS() {
+			this.metodo01 = function () {
+				alert('Metodo numero 01');				
+			},
+			this.metodo02 = function () {
+				alert('Metodo numero 02');
+			}
+		}
+
+		console.log(new AppJS().metodo01());
+		console.log(new AppJS().metodo01());
+		// console.log(new funcao().metodo02());
+		// console.log(new funcao());
+		// console.log(typeof AppJS);
+	</script>
+</head>
+
+<body>
+	<div id="teste"></div>
+</body>
+</html>

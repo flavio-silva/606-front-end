@@ -1,0 +1,27 @@
+<html>
+<head>
+	<script type="text/javascript">
+
+		function valores () {
+			var primeiro = document.getElementById('valor1').value;
+			var segundo = document.getElementById('valor2').value;
+
+			var exibeTexto = "O primeiro valor e: " + primeiro + "\nO segundo valor e: " + segundo + " ";
+
+			alert(exibeTexto);
+
+			var teste = document.getElementById("teste").innerHTML = "Texto dentro da DIV";
+
+			console.log(teste);
+			alert(typeof teste);
+		}
+	</script>
+</head>
+<body>
+
+	<input type="text" id="valor1" name="valor[]"/>
+	<input type="text" id="valor2" name="valor[]"/>
+	<div id="teste">4linux</div>
+	<input type="button" onClick="valores()" value="ENVIAR"/>
+</body>
+</html>
