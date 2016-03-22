@@ -1,0 +1,30 @@
+<html>
+<head>
+	<script>
+	</script>
+</head>
+<body>
+	
+	<script>
+		function Livro(titulo, ano) {
+			this.getTitulo = function () {
+				return titulo;
+			}
+			this.getAno = function () {
+				return ano;
+			}
+
+			this.setTitulo = function (newTitle) {
+				titulo = newTitle;
+			}
+
+			this.setAno = function (newAno) {
+				ano = newAno;
+			}
+		}
+
+		var livro = new Livro('php oo', 2005);
+		
+	</script>
+</body>
+</html>

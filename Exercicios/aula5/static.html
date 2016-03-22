@@ -1,0 +1,25 @@
+<html>
+<head>
+	<script>
+	</script>
+</head>
+<body>
+	
+	<script>
+		function Livro(titulo) {
+			
+			this.titulo = titulo;
+			this.count = function () {
+				Livro.count++;
+			}
+
+			this.count();
+		}
+
+		var livro = new Livro('php');
+
+		console.log(livro);
+		console.log(Livro);
+	</script>
+</body>
+</html>

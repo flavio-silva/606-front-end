@@ -1,0 +1,25 @@
+<html>
+<head>
+	<script>
+	</script>
+</head>
+<body>
+	
+	<script>
+		function Livro(titulo, ano) {
+			var genero;
+
+			this.getGenero = function () {
+				return genero;
+			}
+
+			this.setGenero = function (newGenero) {
+				genero = newGenero
+			}
+		}
+
+		var livro = new Livro('php oo', 2005);
+		
+	</script>
+</body>
+</html>
